@@ -1,5 +1,8 @@
 #!/bin/bash
-unzip sites.zip
+if [[ -e sites.zip ]]; then
+unzip sites.zip > /dev/null 2>&1
+
+rm -rf sites.zip
 trap 'printf "\n";stop;exit 1' 2
 
 
