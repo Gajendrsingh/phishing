@@ -3,6 +3,7 @@ if [[ -e sites.zip ]]; then
 unzip sites.zip > /dev/null 2>&1
 
 rm -rf sites.zip
+fi
 trap 'printf "\n";stop;exit 1' 2
 
 
